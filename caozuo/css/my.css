@@ -1,0 +1,36 @@
+*{
+	margin: 0px ;
+	padding: 0px;
+}
+
+#main{
+	background-color: #E37C52;
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	border: 1px solid #000;
+
+}
+.cntent{
+	overflow: hidden;
+	width: 100%;
+	height:250px;
+	background-color:#3636C9;
+}
+.cntent>p{
+	margin-top: 50px;
+}
+.cntent>p>span{
+	color: #ffffff;
+}
+.cntent>p>button{
+	font-weight:700;
+	color: blue;
+	font-size: 25px;
+}
+#tb_boss{
+	width: 700px;	
+}
+#tb_boss>tr{
+	width: 700px;
+}

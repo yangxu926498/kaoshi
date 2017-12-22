@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/my.css">
+</head>
+<body>
+	<div id="main">
+		<span style="font-size:35px;font-weight:700">登录</span>
+		<div class="cntent">
+			<p><span>userName</span><input id="userName" type="text"></p>
+			<p><span>userPass </span><input id="userPass" type="password"></p>
+			<p><button id="onlin">登录</button> </p>
+		</div>
+	</div>
+	<script src="js/jquery-3.2.0.min.js"></script>
+</body>
+<script>
+var user_N;
+$('#onlin').on('click',function(){
+if($('#userName').val()==''||$('#userPass').val()==''){
+		alert("不能为空");
+		}
+	
+	else{
+		user_N=$('#userName').val();
+		var user_P=$('#userPass').val();
+		$.post('/my_kaoshi/caozuo/php/onlin.php',{user_N:user_N,user_P:user_P},function(res){
+				if(res==3333||res==2){
+					alert("输入正确的user 和密码");
+				}
+				else if(res==1){
+					window.location.href=''+user_N+'.html'
+				}
+			})	
+		}
+})
+</script>
+</html>
